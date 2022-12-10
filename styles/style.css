@@ -70,7 +70,7 @@ dd {
 /* Стили для подзаголовка в шапке */
 .header__subtitle {
   position: absolute;
-  width: 338px;
+  width: 388px;
   bottom: 30px;
   left: 64px;
   line-height: 25px;
@@ -100,9 +100,72 @@ dd {
   z-index: 0;
 }
 
+.description{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Стили для блока two-columns */
+.two-columns {
+  min-height: 400px;
+  display: flex;
+  width: 80%
+}
+
+.two-columns__brief {
+  min-width: 175px;
+}
+
+.two-columns__title{
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+
+}
+
+.two-columns__main-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+
+  
+  
+  
+}
+
+.two-columns__paragraph{
+line-height: 34px;
+font-size: 24px;
+font-weight: normal;
+min-width: 784px;
+width: 80%;
+
+}
+
+.two-columns__span-accent{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.digits{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: antiquewhite;
+}
+
+.digits__title{
+  width: 60%;
+  font-size: ;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
-  width: 200px;
+  /* width должен быть 200px */
+
   color: white;
   margin-right: 0;
   margin-top: 80px;
