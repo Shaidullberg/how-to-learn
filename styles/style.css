@@ -326,6 +326,12 @@ margin-bottom: 18px;
   justify-content: space-between ;
 }
 
+.column__link {
+  line-height: 30px;
+font-size: 18px;
+font-weight: normal;
+}
+
 .column__links{
   margin-top: 20px;
   margin-bottom: 16px;
@@ -335,4 +341,10 @@ margin-bottom: 18px;
 }
 .column_links_position{
   margin-right: 10px;
+}
+
+.footer__column-heading{
+line-height: 30px;
+font-size: 18px;
+font-weight: 600;
 }
