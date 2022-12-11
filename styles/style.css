@@ -1,3 +1,9 @@
+/* применяю свойство box-sizing*/
+* {
+  box-sizing: border-box;
+  border: 1px solid green;
+}
+
 /* Убираю внешние отступы */
 body,
 h1,
@@ -16,9 +22,7 @@ dd {
   margin: 0;
 }
 
-* {
-  border: 1px solid red;
-}
+
 
 .page {
   min-width: 1100px;
@@ -30,7 +34,7 @@ dd {
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
-
+/* Начало стилей для шапки */
 .header {
   height: 100vh;
   min-height: 600px;
@@ -41,10 +45,9 @@ dd {
   /* выше установили ограничения для секции */
 }
 
-/* Стили для ссылок на странице */
+/* Стили для всех ссылок на странице */
 .link {
   text-decoration: none;
-  color: #2f80ed;
 }
 
 /* Общие стили для логотипа */
@@ -54,7 +57,7 @@ dd {
 }
 
 /* стиль для логотипа в шапке */
-.header__logo {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -83,6 +86,10 @@ dd {
   z-index: 2;
 }
 
+.header__link{
+  color: #2f80ed;
+}
+
 /* Стили для иллюстрации в шапке */
 .header__main-illustration {
   width: 765px;
@@ -103,48 +110,39 @@ dd {
   top: 64px;
   z-index: 0;
 }
+/* Конец стилей для шапки */
 
-.description{
-  margin-top: 100px;
+/* Начало стилей для секции discription */
+.two-columns{
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 100px auto 0;
 }
 
-/* Стили для блока two-columns */
-
-
-.two-columns__brief {
+.two-columns__brief{
   width: 175px;
-}
-
-.two-columns__title{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-
+  color: #2f80ed;
 }
 
-.two-columns__main-text {
-  display: flex;
-  flex-direction: row;
-  
-  align-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
+.two-columns__link{
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
 
-  
-  
-  
+.two-columns__main-text{
+  min-width: 784px;
+  width: 80%;
 }
 
 .two-columns__paragraph{
-line-height: 34px;
-font-size: 24px;
-font-weight: normal;
-min-width: 784px;
-width: 80%;
-text-align: justify;
-
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
 }
 
 .two-columns__span-accent{
@@ -152,12 +150,14 @@ text-align: justify;
   font-size: 24px;
   font-weight: 600;
 }
+/* Конец стилей для секции discription */
 
+/* Начало стилей для секции digits */
 .digits{
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
+/* Стили заголовка сеции digits */
 .digits__title{
   width: 60%;
   font-size: 60px;
@@ -167,7 +167,7 @@ text-align: justify;
   margin: auto;
   text-align: center;
 }
-
+/* Стили подзаголовка сеции digits */
 .digits__subtitle{
   width: 60%;
   font-size: 24px;
@@ -177,7 +177,7 @@ text-align: justify;
   text-align: center;
   margin-top: 20px;
 }
-
+/* Стили для таблицы секции digits */
 .table{
 width: 1100px;
 margin: auto;
@@ -186,35 +186,36 @@ flex-wrap: wrap;
 justify-content: space-between ;
 margin-bottom: 90px;
 }
-
+/* Стили для создания карточек в table */
 .table__cell{
 width: 250px;
 margin-top: 60px;
 text-align: center;
 
 }
-
+/* заголовок карточки */
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
 }
-
+/* текст карточки */
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   margin-top: 20px;
 }
-
+/* конец блока digits */
+/* Начало блока feynman */
 .feynman {
   background-color: #f2f2f2;
   min-height: 890px;
   position: relative;
   text-align: center;
-  z-index: -2;
+  z-index: 0;
 }
-
+/* Заголовок секции feynman */
 .feynman__title {
   font-size: 120px;
   line-height: 1.15;
@@ -222,7 +223,7 @@ text-align: center;
   z-index: 2;
   margin-top: 100px;
 }
-
+/* подзаголовок секции feynman */
 .feynman__subtitle {
   font-size: 36px;
   line-height: 51px;
@@ -230,17 +231,18 @@ text-align: center;
   z-index: 2;
   margin-top: 70px;
 }
-
-.feynman__link{
+/* стили для текста "подробнее" */
+.feynman__link {
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   top: 50%;
   right: 48px;
+  color: #2f80ed;
 }
-
+/* Стили для изображения секции feynman */
 .feynman__image{
   width: 867px;
   height: 637px;
@@ -249,7 +251,8 @@ text-align: center;
   left: 0;
   z-index: -1;
 }
-
+/* конец секции feynman */
+/* Начало секции kaufman */
 .kaufman {
   background-color: #1f1f1f;
   color: white;
@@ -258,28 +261,28 @@ text-align: center;
   overflow: hidden; 
   z-index: -2;
 }
-
+/* Стили для заголовка секции kaufman*/
 .kaufman__title_theme_dark{
   margin-top: 90px;
   font-size: 60px;
   line-height: 1.15;
   font-weight: 600;
 }
-
+/* Стили для подзаголовка секции kaufman*/
 .kaufman__subtitle_theme_dark{
   margin-top: 20px;
   font-size: 24px;
   font-weight: normal;
   line-height: 34px;
 }
-
+/* стили для таблици секции kaufman */
 .table__cell_theme_dark {
   width: 200px; 
   margin-right: 0;
   margin-top: 80px;
   text-align: left;
 }
-
+/* Изображение синего треугольника в секции kaufman */
 .kaufman__image {
   width: 877px;
   height: 877px;
@@ -288,17 +291,14 @@ text-align: center;
   right: -210px;
   z-index: -1;
 }
-
+/* Конец секции kaufman  */
+/* Подвал сайта */
 .footer{
   min-height: 350px;
   background-color: #1f1f1f;
   color: white;
   display: flex;
   justify-content: center;
-
-
-  
-
 }
 
 .footer__columns{
@@ -311,9 +311,6 @@ margin-bottom: 40px;
   
 }
 
-.footer__column_content_copyright {
-flex-basis: 711px;
-}
 
 .footer__author{
 margin-bottom: 18px;
@@ -323,13 +320,15 @@ margin-bottom: 18px;
 .footer__column_content_copyright{
   display: flex;
   flex-direction: column;
-  justify-content: space-between ;
+  justify-content: space-between;
+  flex-basis: 711px;
 }
 
 .column__link {
   line-height: 30px;
 font-size: 18px;
 font-weight: normal;
+color: white;
 }
 
 .column__links{
