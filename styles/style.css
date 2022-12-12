@@ -194,6 +194,7 @@ text-align: center;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
+  text-align: left;
 }
 /* текст карточки */
 .table__text {
@@ -201,54 +202,54 @@ text-align: center;
   font-size: 18px;
   font-weight: normal;
   margin-top: 20px;
+  text-align: left ;
 }
 /* конец блока digits */
 /* Начало блока feynman */
 .feynman {
-  background-color: #f2f2f2;
   height: 890px;
+  background-color: #f2f2f2;
+  padding-top: 100px;
   position: relative;
   z-index: 0;
 }
-/* Заголовок секции feynman */
-.feynman__title {
-  width: 648px;
-  font-size: 120px;
-  line-height: 1.15;
-  font-weight: 600;
-  z-index: 2;
-  text-align: center;
-  margin: 100px auto 70px;
-}
-/* подзаголовок секции feynman */
-.feynman__subtitle {
-  font-size: 36px;
-  line-height: 51px;
-  font-weight: normal;
-  z-index: 2;
-  text-align: center;
 
+.feynman__title{
+width: 648px;
+line-height: 1.15;
+font-size: 120px;
+font-weight: 600;
+margin: auto;
+text-align: center;
+z-index: 1;
 }
-/* стили для текста "подробнее" */
-.feynman__link {
-  font-size: 36px;
+
+.feynman__subtitle{
   line-height: 51px;
+  font-size: 36px;
   font-weight: normal;
-  z-index: 4;
+  margin: 70px auto 0px;
+  text-align: center;
+  z-index: 1;
+}
+
+.faynman__link{
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
   position: absolute;
   top: 50%;
   right: 48px;
-  color: #2f80ed;
 }
-/* Стили для изображения секции feynman */
-.feynman__image{
-  width: 867px;
-  height: 637px;
+
+.faynman__image{
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: -1;
 }
+
 /* конец секции feynman */
 /* Начало секции kaufman */
 .kaufman {
@@ -291,7 +292,7 @@ color: #fff;
 }
 
 /* Изображение синего треугольника в секции kaufman */
-.kaufman__image {
+.kaufman__triangle {
   width: 877px;
   height: 877px;
   position: absolute;
