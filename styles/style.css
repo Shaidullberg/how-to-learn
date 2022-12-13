@@ -35,6 +35,7 @@ dd {
   display: flex;
   align-items: center;
   background: #f2f2f2;
+  box-sizing: border-box;
   /* выше установили ограничения для секции */
 }
 
@@ -66,7 +67,7 @@ dd {
 /* Стили для подзаголовка в шапке */
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   bottom: 30px;
   left: 64px;
   line-height: 25px;
@@ -155,6 +156,7 @@ dd {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 /* Стили заголовка сеции digits */
 .section-title {
@@ -212,7 +214,7 @@ dd {
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
@@ -260,6 +262,8 @@ dd {
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  
 }
 /* Стили для заголовка секции kaufman*/
 .section-title_theme_dark {
@@ -277,6 +281,7 @@ dd {
   margin-right: 0;
   margin-top: 80px;
   text-align: left;
+  z-index: 1;
 }
 /* делаю отступ от таблицы */
 .table_theme_dark {
@@ -292,7 +297,17 @@ dd {
 }
 
 /* Изображение синего треугольника в секции kaufman */
-
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/images/kaufman-triangle.svg");
+  z-index: 0;
+}
 /* Конец секции kaufman  */
 /* Подвал сайта */
 .footer {
@@ -301,6 +316,7 @@ dd {
   color: white;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 /* Стили для блока */
 .footer__columns {
