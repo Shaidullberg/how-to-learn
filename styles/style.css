@@ -16,6 +16,10 @@ dd {
   margin: 0;
 }
 
+* {
+  outline: 1px solid blueviolet;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -269,10 +273,12 @@ dd {
 .section-title_theme_dark {
   color: #fff;
   margin-top: 90px;
+  z-index: 1;
 }
 /* Стили для подзаголовка секции kaufman*/
 .section-subtitle_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 /* стили для таблици секции kaufman */
