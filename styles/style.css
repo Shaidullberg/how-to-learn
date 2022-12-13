@@ -1,8 +1,3 @@
-/* применяю свойство box-sizing*/
-* {
-  box-sizing: border-box;
-}
-
 /* Убираю внешние отступы */
 body,
 h1,
@@ -20,8 +15,6 @@ dl,
 dd {
   margin: 0;
 }
-
-
 
 .page {
   min-width: 1100px;
@@ -45,11 +38,6 @@ dd {
   /* выше установили ограничения для секции */
 }
 
-/* Убрал подчёркивание для всех ссылок на странице */
-.link {
-  text-decoration: none;
-}
-
 /* Задаю размеры для логотипа */
 .logo {
   width: 228px;
@@ -66,12 +54,13 @@ dd {
 
 /* стили для заголовка в шапке */
 .header__title {
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
   z-index: 2;
+  position: relative;
 }
 
 /* Стили для подзаголовка в шапке */
@@ -87,8 +76,10 @@ dd {
 }
 
 /* цвет для ссылки в шапке */
-.header__link{
+.header__link {
   color: #2f80ed;
+  text-decoration: none;
+  position: relative;
 }
 
 /* Стили для иллюстрации в шапке */
@@ -98,6 +89,7 @@ dd {
   position: absolute;
   bottom: 0;
   right: 0;
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -114,14 +106,14 @@ dd {
 /* Конец стилей для шапки */
 
 /* Начало стилей для секции discription */
-.two-columns{
+.two-columns {
   width: 80%;
   display: flex;
   justify-content: space-between;
   margin: 100px auto 0;
 }
 /* стили для левого блока в блоке two-columns */
-.two-columns__brief{
+.two-columns__brief {
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
@@ -129,29 +121,28 @@ dd {
   color: #2f80ed;
 }
 /* стили для текста внутри two-columns__brief */
-.two-columns__link{
+.two-columns__link {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 /* Стиили для правого блока блока two-columns */
-.two-columns__main-text{
+.two-columns__main-text {
   min-width: 784px;
   width: 80%;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  
 }
 /* Стили для текс та внутри блока two-columns__main-text*/
-.two-columns__paragraph{
+.two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
 /* Уникальные стили для слова "Вывод" */
-.two-columns__span-accent{
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
@@ -159,14 +150,14 @@ dd {
 /* Конец стилей для секции discription */
 
 /* Начало стилей для секции digits */
-.digits{
+.digits {
   margin: 100px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 /* Стили заголовка сеции digits */
-.section__title{
+.section-title {
   width: 60%;
   font-size: 60px;
   line-height: 1.15;
@@ -175,7 +166,7 @@ dd {
   text-align: center;
 }
 /* Стили подзаголовка сеции digits */
-.section__subtitle{
+.section-subtitle {
   width: 60%;
   font-size: 24px;
   line-height: 34px;
@@ -183,17 +174,17 @@ dd {
   text-align: center;
 }
 /* Стили для таблицы секции digits */
-.table{
-width: 1100px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+.table {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 /* Стили для создания карточек в table */
-.table__cell{
-width: 250px;
-margin-top: 60px;
-text-align: center;
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+  text-align: center;
 }
 /* заголовок карточки */
 .table__heading {
@@ -213,33 +204,35 @@ text-align: center;
 /* конец блока digits */
 /* Начало блока feynman */
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   padding-top: 100px;
   position: relative;
-  z-index: 0;
+  box-sizing: border-box;
 }
 
-.feynman__title{
-width: 648px;
-line-height: 1.15;
-font-size: 120px;
-font-weight: 600;
-margin: auto;
-text-align: center;
-z-index: 1;
+.feynman__title {
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.feynman__subtitle{
+.feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
   margin: 70px auto 0px;
   text-align: center;
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
-.faynman__link{
+.feynman__link {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -247,13 +240,15 @@ z-index: 1;
   position: absolute;
   top: 50%;
   right: 48px;
+  text-decoration: none;
+  z-index: 2;
 }
 
-.faynman__image{
+.feynman__image {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* конец секции feynman */
@@ -265,15 +260,14 @@ z-index: 1;
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
-  z-index: -2;
 }
 /* Стили для заголовка секции kaufman*/
-.section__title_theme_dark{
-color: #fff;
+.section-title_theme_dark {
+  color: #fff;
   margin-top: 90px;
 }
 /* Стили для подзаголовка секции kaufman*/
-.section__subtitle_theme_dark{
+.section-subtitle_theme_dark {
   color: white;
 }
 
@@ -285,30 +279,23 @@ color: #fff;
   text-align: left;
 }
 /* делаю отступ от таблицы */
-.table_theme_dark{
+.table_theme_dark {
   margin-bottom: 90px;
 }
 /* меняю цвет в шапке карточки */
-.table__heading_theme_dark{
+.table__heading_theme_dark {
   color: #fff;
 }
 /* Меняю цвет в тексте карточки */
-.table__text_theme_dark{
+.table__text_theme_dark {
   color: #fff;
 }
 
 /* Изображение синего треугольника в секции kaufman */
-.kaufman__triangle {
-  width: 877px;
-  height: 877px;
-  position: absolute;
-  top: 0;
-  right: -210px;
-  z-index: -1;
-}
+
 /* Конец секции kaufman  */
 /* Подвал сайта */
-.footer{
+.footer {
   min-height: 350px;
   background-color: #1f1f1f;
   color: white;
@@ -316,37 +303,39 @@ color: #fff;
   justify-content: center;
 }
 /* Стили для блока */
-.footer__columns{
+.footer__columns {
   width: 90%;
   display: flex;
   position: relative;
-justify-content: space-between;
-margin-top: 60px;
-margin-bottom: 40px;
-  
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 /* отступ для блока */
-.footer__author{
-margin-bottom: 18px;
-  
+.footer__author {
+  margin-bottom: 18px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 /* Стили для первого блока (считаем слева направо) */
-.footer__column_content_copyright{
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
 }
 /* Задаю стили в подвале для ссылок в блоках footer__column_content_info/social  */
-.column__link {
+.column-link {
   line-height: 30px;
-font-size: 18px;
-font-weight: normal;
-color: white;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
 }
 /* Задаю отступы и позиционирование для ссылок внутри footer__column_content_info */
-.column__links{
+.column-links {
   margin-top: 20px;
   margin-bottom: 16px;
   display: flex;
@@ -359,8 +348,8 @@ color: white;
   margin-right: 10px;
 }
 /* Задаю отступы и позиционирование для заголовков footer__column_content_info/social */
-.footer__column-heading{
-line-height: 30px;
-font-size: 18px;
-font-weight: 600;
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
 }
