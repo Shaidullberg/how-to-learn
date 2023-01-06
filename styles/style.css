@@ -18,6 +18,7 @@
   align-items: center;
   background: #f2f2f2;
   box-sizing: border-box;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
@@ -95,6 +96,19 @@
   z-index: 0;
 }
 /* Конец стилей для шапки */
+
+.rotation {
+animation: myanim 20s linear infinite;
+}
+/* Анимация для квадрата и треугольника */
+@keyframes myanim {
+from {
+  transform: rotate(0);
+}
+  to {
+transform: rotate(360deg)
+  }
+}
 
 /* Начало стилей для секции discription */
 .two-columns {
