@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -110,7 +114,11 @@ transform: rotate(360deg)
   }
 }
 
-/* Начало стилей для секции discription */
+.description {
+  margin: 100px auto;
+  margin-bottom: 0;
+}
+/* Начало стилей для секции description */
 .two-columns {
   width: 80%;
   display: flex;
@@ -155,6 +163,80 @@ transform: rotate(360deg)
   font-weight: 600;
 }
 /* Конец стилей для секции discription */
+
+/* Начало стилей для блока techniques */
+.techniques {
+  margin: 100px auto;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards__item {
+  text-align: center;
+  width: 240px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 40px 43px 40px;
+}
+
+.cards__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cards__description {
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+/* Конец блока techniques  */
+
+/* Начало блока video */
+.video {
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+
+}
+
+.video__iframes {
+  display: flex;
+  margin-top: 50px;
+  column-gap: 20px;
+}
+/* Конец стилей для video */
+
+/* Стили для блока oakley */
+.oakley {
+  margin: 0 auto;
+  margin-top: 160px;
+}
 
 /* Начало стилей для секции digits */
 .digits {
