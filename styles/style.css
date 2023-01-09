@@ -122,7 +122,7 @@ transform: rotate(360deg)
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: 100px auto 0;
+  margin: 0 auto;
 }
 /* стили для левого блока в блоке two-columns */
 .two-columns__brief {
@@ -175,17 +175,17 @@ transform: rotate(360deg)
 
 .cards {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 920px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+ column-gap: 100px;
 }
 
 .cards__item {
-  text-align: center;
   width: 240px;
+  text-align: center;
 }
 
 .cards__image {
@@ -235,7 +235,9 @@ transform: rotate(360deg)
 /* Стили для блока oakley */
 .oakley {
   margin: 0 auto;
-  margin-top: 160px;
+  padding-top: 160px;
+  background: #f2f2f2;
+  box-sizing: border-box;
 }
 
 /* Начало блока feynman */
@@ -359,7 +361,13 @@ transform: rotate(360deg)
 /* Начало секции Khan */
 .khan {
   margin: 0 auto;
-  margin-top: 100px;
+  padding-top: 105px;
+  display: flex;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.khan__container {
   width: 80%;
 }
 
