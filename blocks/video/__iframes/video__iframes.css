@@ -1,4 +1,7 @@
 .video__iframes {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6,5 +9,8 @@
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    margin-bottom: -60px;
+    transform: translate(0, 60px);
+    justify-content: center;
+    flex-wrap: wrap;
+    
   }
