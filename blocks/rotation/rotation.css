@@ -1,0 +1,25 @@
+.rotation {
+    -webkit-animation: myanim 20s linear infinite;
+    animation: myanim 20s linear infinite;
+  }
+  /* Анимация для квадрата и треугольника */
+  @-webkit-keyframes myanim {
+    from {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes myanim {
+    from {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
