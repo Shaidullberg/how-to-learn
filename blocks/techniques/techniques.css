@@ -9,5 +9,5 @@
     justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    min-width: 80%;
+    width: 80%;
   }
